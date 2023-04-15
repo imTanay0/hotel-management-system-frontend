@@ -1,0 +1,45 @@
+.home-section {
+  height: 600px;
+  text-align: center;
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.home-section-heading {
+  margin-bottom: 5rem;
+  position: relative;
+  top: -70px;
+  font-size: 3rem;
+}
+
+.home-section-content {
+  display: flex;
+  flex-direction: row;
+  gap: 5rem;
+  justify-content: center;
+}
+
+.already-booked,
+.unbooked {
+  padding: 30px;
+  width: 350px;
+  line-height: 1.5;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.already-booked button,
+.unbooked button {
+  width: 100px;
+  height: 35px;
+  margin-top: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.already-booked button:hover,
+.unbooked button:hover {
+  background-color: #d9d9d9;
+}
