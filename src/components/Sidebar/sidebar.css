@@ -1,0 +1,55 @@
+.sidebar-container {
+  width: 250px;
+  height: 100vh;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid black;
+  padding: 5px;
+}
+
+.sidebar__logo,
+.sidebar__room-types,
+.sidebar__rooms,
+.sidebar__bookings,
+.sidebar__customer,
+.sidebar__allocate-rooms,
+.sidebar__food,
+.sidebar__billing {
+  background-color: rgb(0, 12, 103);
+  color: white;
+  padding-left: 4.3rem;
+  display: flex;
+  align-items: center;
+  height: 50px;
+  border: white 1px solid;
+  cursor: pointer;
+}
+
+.sidebar__logo {
+  /* justify-content: center;
+  padding: 0; */
+  border-radius: 8px 8px 0 0;
+}
+
+.sidebar__billing {
+  border-radius: 0 0 8px 8px;
+}
+
+a:-webkit-any-link {
+  color: inherit;
+  text-decoration: none;
+  width: inherit;
+}
+
+.sidebar__logo:hover,
+.sidebar__room-types:hover,
+.sidebar__rooms:hover,
+.sidebar__bookings:hover,
+.sidebar__customer:hover,
+.sidebar__allocate-rooms:hover,
+.sidebar__food:hover,
+.sidebar__billing:hover {
+  background-color: rgb(148, 235, 255);
+  color: black;
+}

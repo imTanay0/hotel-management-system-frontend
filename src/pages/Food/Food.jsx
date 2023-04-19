@@ -49,7 +49,7 @@ const Food = () => {
         </form>
       </div>
 
-      <Link to="/billing"><button>Go To Food Page</button></Link>
+      <Link to="/billing"><button>Go To Billing Page</button></Link>
 
     </div>
   )

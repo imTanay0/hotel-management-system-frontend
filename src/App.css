@@ -2,3 +2,15 @@
   padding: 0;
   margin: 0;
 }
+
+.App {
+  display: flex;
+  flex-direction: row;
+}
+
+.sidebar {
+}
+
+.main-content {
+  width: 100%;
+}

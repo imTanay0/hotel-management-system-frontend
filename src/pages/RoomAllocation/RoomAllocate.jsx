@@ -194,7 +194,7 @@ const RoomAllocate = () => {
       </div>
 
       <div id="next-page-btn">
-        <Link to="/food"><button>Go To Food Page</button></Link>
+        <Link to="/food" target='_blank'><button>Go To Food Page</button></Link>
       </div>
     </div>
   )

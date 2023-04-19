@@ -11,6 +11,7 @@ const Home = () => {
 
   return (
     <div className='home-section'>
+
       <h1 className='home-section-heading'>
         Welcome to The Lushai Inn
       </h1>
