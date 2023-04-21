@@ -1,14 +1,14 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-import './booking.css'
+import './addBooking.css'
 
-const Booking = () => {
+const AddBooking = () => {
   return (
     <div className='booking-section'>
-      <h1>Booking</h1>
-      <Link to="/">
-        <button>Go To Home Page</button>
+      <h1>Book a New Customer</h1>
+      <Link to="/bookings">
+        <button>{`<`} Back</button>
       </Link>
 
       <div className='booking-section-form'>
@@ -61,4 +61,4 @@ const Booking = () => {
   )
 }
 
-export default Booking
+export default AddBooking

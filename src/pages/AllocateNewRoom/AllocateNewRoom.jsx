@@ -1,9 +1,9 @@
 import { React, useState } from 'react'
 import { Link } from 'react-router-dom'
 
-import './roomAllocate.css'
+import './allocateNewRoom.css'
 
-const RoomAllocate = () => {
+const AllocateNewRoom = () => {
 
   const [userInfo, setUserInfo] = useState({
     name: '',
@@ -41,7 +41,7 @@ const RoomAllocate = () => {
       const response = await res.json();
 
       // Printing the reponse in the Console
-      console.log(response)
+      // console.log(response)
 
       if (response.success) {
         alert("Customer Booked successfully")
@@ -69,9 +69,10 @@ const RoomAllocate = () => {
   };
 
 
+
   return (
     <div className='room-allocate-section'>
-      <h1>Room Allocation</h1>
+      <h1>Allocate a Room to a Customer</h1>
 
       <div id='previous-page-btn'>
         <Link to="/">
@@ -81,6 +82,8 @@ const RoomAllocate = () => {
 
       <div className='room-allocate-section-form'>
         <form onSubmit={handleSubmit}>
+
+          {/* <div> */}
           <label htmlFor='user-name'>Name of the Customer: </label>
           <input
             id='user-name'
@@ -89,10 +92,12 @@ const RoomAllocate = () => {
             value={userInfo.name}
             onChange={handleChange}
           />
+          {/* </div> */}
 
-          <br />
-          <br />
+          {/* <br />
+          <br /> */}
 
+          {/* // TODO: Add Upload Photo Feature }
           {/* <label htmlFor='user-photo'>Photo Identity: </label>
           <input
             id='user-photo'
@@ -104,6 +109,7 @@ const RoomAllocate = () => {
           <br />
           <br /> */}
 
+          {/* <div> */}
           <label htmlFor='user-phoneNo'>Phone no: </label>
           <input
             id='user-phoneNo'
@@ -112,9 +118,10 @@ const RoomAllocate = () => {
             value={userInfo.phone_number}
             onChange={handleChange}
           />
+          {/* </div> */}
 
-          <br />
-          <br />
+          {/* <br />
+          <br /> */}
 
           <label htmlFor='user-address'>Address: </label>
           <input
@@ -124,8 +131,8 @@ const RoomAllocate = () => {
             value={userInfo.address}
             onChange={handleChange}
           />
-          <br />
-          <br />
+          {/* <br />
+          <br /> */}
 
           <label htmlFor='user-roomNo'>Room No: </label>
           <input
@@ -136,8 +143,8 @@ const RoomAllocate = () => {
             onChange={handleChange}
           />
 
-          <br />
-          <br />
+          {/* <br />
+          <br /> */}
 
           <label htmlFor='user-localNo'>Local Contact No: </label>
           <input
@@ -148,8 +155,8 @@ const RoomAllocate = () => {
             onChange={handleChange}
           />
 
-          <br />
-          <br />
+          {/* <br />
+          <br /> */}
 
           <label htmlFor='user-date_of_check_in'>Date of Check in: </label>
           <input
@@ -160,8 +167,8 @@ const RoomAllocate = () => {
             onChange={handleChange}
           />
 
-          <br />
-          <br />
+          {/* <br />
+          <br /> */}
 
           <label htmlFor='user-company_name'>Company Name: </label>
           <input
@@ -172,8 +179,8 @@ const RoomAllocate = () => {
             onChange={handleChange}
           />
 
-          <br />
-          <br />
+          {/* <br />
+          <br /> */}
 
           <label htmlFor='user-GSTIN'>GSTIN No: </label>
           <input
@@ -184,8 +191,8 @@ const RoomAllocate = () => {
             onChange={handleChange}
           />
 
-          <br />
-          <br />
+          {/* <br />
+          <br /> */}
 
           <div id="form-submit-btn">
             <button type='submit'>Submit</button>
@@ -200,4 +207,4 @@ const RoomAllocate = () => {
   )
 }
 
-export default RoomAllocate
+export default AllocateNewRoom

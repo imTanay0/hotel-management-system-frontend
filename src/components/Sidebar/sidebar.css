@@ -1,11 +1,13 @@
 .sidebar-container {
   width: 250px;
-  height: 100vh;
-  top: 0;
+  height: 100%;
+  min-height: 100vh;
+  padding: 5px;
   display: flex;
   flex-direction: column;
   border-right: 1px solid black;
-  padding: 5px;
+  /* border-bottom: 1px solid black; */
+  /* border-radius: 0 0 10px 0; */
 }
 
 .sidebar__logo,

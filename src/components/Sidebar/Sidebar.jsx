@@ -6,32 +6,47 @@ import './sidebar.css';
 const Sidebar = () => {
   return (
     <div className='sidebar-container'>
-      <div className="sidebar__logo">
-        <Link to="/">
+      <Link to="/">
+        <div className="sidebar__logo">
           <p>HOME</p>
-        </Link>
-      </div>
+        </div>
+      </Link>
+
       <div className="sidebar__room-types">
-        <p>room types</p>
+        <p>Room types</p>
       </div>
+      
       <div className="sidebar__rooms">
-        <p>rooms</p>
+        <p>Rooms</p>
       </div>
-      <div className="sidebar__bookings">
-        <Link to="/booking"><p>Booking</p></Link>
-      </div>
+      
+      <Link to="/bookings">
+        <div className="sidebar__bookings">
+          <p>Bookings</p>
+        </div>
+      </Link>
+
       <div className="sidebar__customer">
-        <p>customers</p>
+        <p>Customers</p>
       </div>
-      <div className="sidebar__allocate-rooms">
-        <Link to="/room-allocation"><p>Allocate Room</p></Link>
-      </div>
-      <div className="sidebar__food">
-        <Link to="/food"><p>food</p></Link>
-      </div>
-      <div className="sidebar__billing">
-      <Link to="/billing"><p>billing</p></Link>
-      </div>
+
+      <Link to="/allocate-room">
+        <div className="sidebar__allocate-rooms">
+          <p>Allocate Room</p>
+        </div>
+      </Link>
+
+      <Link to="/food">
+        <div className="sidebar__food">
+          <p>Food</p>
+        </div>
+      </Link>
+
+      <Link to="/billing">
+        <div className="sidebar__billing">
+          <p>Billing</p>
+        </div>
+      </Link>
     </div>
   )
 }
