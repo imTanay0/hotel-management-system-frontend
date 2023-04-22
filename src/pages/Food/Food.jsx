@@ -9,7 +9,7 @@ const Food = () => {
       <h1>Food</h1>
 
       <Link to="/">
-        <button>Go To Home Page</button>
+        <button className='btn'>Go To Home Page</button>
       </Link>
 
       <div className='food-section-form'>
@@ -18,7 +18,7 @@ const Food = () => {
 
           <br />
           <br />
-          
+
           <label>Time: <input type="time" /></label>
 
           <br />
@@ -30,10 +30,10 @@ const Food = () => {
           <br />
 
           <label>Item Ordered: (From a dropdown menu)</label>
-          
+
           <br />
           <br />
-          
+
           <label>Room No: <input type="text" /></label>
 
           <br />
@@ -44,13 +44,10 @@ const Food = () => {
           <br />
           <br />
 
-          <button>Submit</button>
-          
+          <button className='btn' type='submit'>Submit</button>
+
         </form>
       </div>
-
-      <Link to="/billing"><button>Go To Billing Page</button></Link>
-
     </div>
   )
 }

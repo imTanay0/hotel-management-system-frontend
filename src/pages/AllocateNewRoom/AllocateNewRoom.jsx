@@ -48,24 +48,23 @@ const AllocateNewRoom = () => {
       } else {
         throw new Error(`Failed to submit form: ${response.message}`);
       }
-
-      // Empty the form inputs after booking one customer
-      setUserInfo({
-        name: '',
-        phone_number: '',
-        address: '',
-        room_no: '',
-        local_contact_number: '',
-        date_of_check_in: '',
-        company_name: '',
-        // rate_negotiated: ''
-        GSTIN_no: '',
-      });
-
     } catch (error) {
       console.error(error);
       alert(error.message);
     }
+
+    // Empty the form inputs after Submit 
+    setUserInfo({
+      name: '',
+      phone_number: '',
+      address: '',
+      room_no: '',
+      local_contact_number: '',
+      date_of_check_in: '',
+      company_name: '',
+      // rate_negotiated: ''
+      GSTIN_no: '',
+    });
   };
 
 
@@ -200,10 +199,6 @@ const AllocateNewRoom = () => {
             <button className='btn' type='submit'>Submit</button>
           </div>
         </form>
-      </div>
-
-      <div id="next-page-btn">
-        <Link to="/food" target='_blank'><button className='btn'>Go To Food Page</button></Link>
       </div>
     </div>
   )

@@ -1,10 +1,10 @@
 .room-allocate-section h1 {
   text-align: center;
-  margin-top: 40px;
+  margin-top: 20px;
 }
 
 #previous-page-btn {
-  margin: 50px 30px 50px 100px;
+  margin: 30px 30px 30px 80px;
 }
 
 .room-allocate-section-form {
@@ -23,8 +23,6 @@
   gap: 5px;
   flex-direction: column;
   justify-content: center;
-  /* position: relative;
-  left: 10px; */
 }
 
 .room-allocate-section-form label {
@@ -53,7 +51,3 @@
   justify-content: flex-end;
   margin: 50px 100px 50px 30px;
 }
-/* 
-.room-allocate-section button:hover {
-  background-color: #d9d9d9;
-} */

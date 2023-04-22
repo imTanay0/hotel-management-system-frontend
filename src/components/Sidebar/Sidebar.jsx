@@ -38,13 +38,13 @@ const Sidebar = () => {
 
       <Link to="/food">
         <div className="sidebar__food">
-          <p>Food</p>
+          <p>Order Food</p>
         </div>
       </Link>
 
       <Link to="/billing">
         <div className="sidebar__billing">
-          <p>Billing</p>
+          <p>Check Billing</p>
         </div>
       </Link>
     </div>

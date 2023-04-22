@@ -59,13 +59,6 @@ const Billing = () => {
 
         </form>
       </div>
-
-      <div className='billling-submit'>
-        <Link to="/">
-          <button className='btn'>Reaturn to home page</button>
-        </Link>
-      </div>
-
     </div>
   )
 }
