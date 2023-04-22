@@ -1,9 +1,21 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 
 import './addBooking.css'
 
 const AddBooking = () => {
+
+  const [customer, setCustomer] = useState({
+    dateOfBooking: "",
+    bookingFrom: "",
+    bookingTo: "",
+    customerName: "",
+    contactNo: "",
+    roomTypeName: "",
+    rateNegotiated: 0,
+  })
+  
+  
   return (
     <section className='booking-section'>
       <h1>Book a New Customer</h1>
