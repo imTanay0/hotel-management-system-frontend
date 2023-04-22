@@ -1,8 +1,52 @@
 .all-booking__section {
-  padding: 50px 100px;
+  padding: 20px 80px;
 }
 
 .all-booking__section h1 {
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
+}
+
+.table-container {
+  margin-top: 50px;
+  margin-inline: auto;
+  color: #e6e6e6;
+  max-width: 100%;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #323232;
+  border-radius: 8px;
+}
+
+th,
+td {
+  padding: 1rem;
+}
+
+th {
+  text-align: left;
+  background: hsl(0 0% 0% / 0.4);
+}
+
+th:first-child {
+  border-radius: 8px 0 0 0;
+}
+
+th:last-child {
+  border-radius: 0 8px 0 0;
+}
+
+tr:nth-of-type(2n) {
+  background: hsl(0 0% 0% / 0.1);
+}
+
+tr:last-child td:first-child {
+  border-radius: 0 0 0 8px;
+}
+
+tr:last-child td:last-child {
+  border-radius: 0 0 8px 0;
 }
