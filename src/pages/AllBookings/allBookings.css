@@ -1,3 +1,8 @@
-/* .all-booking__section {
-  background-color: rgb(21, 0, 255);
-} */
+.all-booking__section {
+  padding: 50px 100px;
+}
+
+.all-booking__section h1 {
+  text-align: center;
+  margin-bottom: 50px;
+}

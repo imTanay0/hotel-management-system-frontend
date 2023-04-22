@@ -4,16 +4,7 @@
 }
 
 #previous-page-btn {
-  margin-left: 150px;
-}
-
-.room-allocate-section button {
-  padding: 0 10px;
-  height: 35px;
-  margin: 30px 0;
-  border-radius: 5px;
-  cursor: pointer;
-  background-color: white;
+  margin: 50px 30px 50px 100px;
 }
 
 .room-allocate-section-form {
@@ -27,13 +18,13 @@
 }
 
 .room-allocate-section-form form {
-  padding: 40px 50px 0;
+  padding: 40px 0 0;
   display: flex;
   gap: 5px;
   flex-direction: column;
   justify-content: center;
   /* position: relative;
-  left: 300px; */
+  left: 10px; */
 }
 
 .room-allocate-section-form label {
@@ -43,22 +34,26 @@
 .room-allocate-section-form input {
   padding: 2px 10px;
   margin-left: 7px;
-  width: 250px;
+  width: inherit;
   height: 25px;
 }
 
 #form-submit-btn {
-  /* width: fit-content; */
   display: flex;
   justify-content: center;
+  margin: 30px 0;
+}
+
+.room-allocate-section-form button {
+  min-width: 400px;
 }
 
 #next-page-btn {
   display: flex;
   justify-content: flex-end;
-  margin-right: 150px;
+  margin: 50px 100px 50px 30px;
 }
-
+/* 
 .room-allocate-section button:hover {
   background-color: #d9d9d9;
-}
+} */

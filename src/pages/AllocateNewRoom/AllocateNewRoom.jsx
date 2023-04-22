@@ -76,7 +76,7 @@ const AllocateNewRoom = () => {
 
       <div id='previous-page-btn'>
         <Link to="/">
-          <button>Go To Home Page</button>
+          <button className='btn'>Go To Home Page</button>
         </Link>
       </div>
 
@@ -84,13 +84,15 @@ const AllocateNewRoom = () => {
         <form onSubmit={handleSubmit}>
 
           {/* <div> */}
-          <label htmlFor='user-name'>Name of the Customer: </label>
+          {/* <label htmlFor='user-name'>Name of the Customer: </label> */}
           <input
             id='user-name'
             type="text"
             name='name'
             value={userInfo.name}
             onChange={handleChange}
+            placeholder='Enter name of the Customer'
+            autoComplete='false'
           />
           {/* </div> */}
 
@@ -195,13 +197,13 @@ const AllocateNewRoom = () => {
           <br /> */}
 
           <div id="form-submit-btn">
-            <button type='submit'>Submit</button>
+            <button className='btn' type='submit'>Submit</button>
           </div>
         </form>
       </div>
 
       <div id="next-page-btn">
-        <Link to="/food" target='_blank'><button>Go To Food Page</button></Link>
+        <Link to="/food" target='_blank'><button className='btn'>Go To Food Page</button></Link>
       </div>
     </div>
   )

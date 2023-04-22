@@ -5,11 +5,15 @@ import './addBooking.css'
 
 const AddBooking = () => {
   return (
-    <div className='booking-section'>
+    <section className='booking-section'>
       <h1>Book a New Customer</h1>
-      <Link to="/bookings">
-        <button>{`<`} Back</button>
-      </Link>
+      <div className="booking-section-back-btn">
+        <Link to="/bookings">
+          <button className='btn'>
+            {`< `} Back
+          </button>
+        </Link>
+      </div>
 
       <div className='booking-section-form'>
         <form>
@@ -54,10 +58,14 @@ const AddBooking = () => {
 
           <br />
           <br />
+
+          <div className="submit-btn">
+            <button className='btn' type="submit">Add Customer</button>
+          </div>
         </form>
       </div>
 
-    </div>
+    </section>
   )
 }
 

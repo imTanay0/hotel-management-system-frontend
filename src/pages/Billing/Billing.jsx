@@ -55,14 +55,14 @@ const Billing = () => {
           <br />
           <br />
 
-          <button>Submit</button>
+          <button className='btn' type='submit'>Submit</button>
 
         </form>
       </div>
 
       <div className='billling-submit'>
         <Link to="/">
-          <button>Reaturn to home page</button>
+          <button className='btn'>Reaturn to home page</button>
         </Link>
       </div>
 
