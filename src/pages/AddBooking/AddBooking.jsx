@@ -24,13 +24,13 @@ const AddBooking = () => {
           <br />
 
           <span>Booking from: </span>
-          <input type="text" />
+          <input type="date" />
 
           <br />
           <br />
 
           <span>Booking to: </span>
-          <input type="text" />
+          <input type="date" />
 
           <br />
           <br />
@@ -60,7 +60,7 @@ const AddBooking = () => {
           <br />
 
           <div className="submit-btn">
-            <button className='btn' type="submit">Add Customer</button>
+            <button className='btn' type="submit">Book Customer</button>
           </div>
         </form>
       </div>

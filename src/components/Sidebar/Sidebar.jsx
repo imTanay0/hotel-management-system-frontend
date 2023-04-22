@@ -26,15 +26,15 @@ const Sidebar = () => {
         </div>
       </Link>
 
-      <div className="sidebar__customer">
-        <p>Customers</p>
-      </div>
-
       <Link to="/allocate-room">
         <div className="sidebar__allocate-rooms">
           <p>Allocate Room</p>
         </div>
       </Link>
+
+      <div className="sidebar__customer">
+        <p>Customers</p>
+      </div>
 
       <Link to="/food">
         <div className="sidebar__food">
