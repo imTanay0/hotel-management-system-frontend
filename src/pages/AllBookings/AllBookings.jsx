@@ -1,9 +1,52 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
 
 import './allBookings.css';
 
+
 const AllBookings = () => {
+
+  const [bookedCustomers, setBookedCustomers] = useState([]);
+
+  useEffect(() => {
+
+    const getBookedCustomers = async () => {
+
+      try {
+        const response = await fetch('http://localhost:8080/api/v1/user/bookings', {
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json',
+          }
+        })
+
+        if (response.ok) {
+          const result = await response.json();
+
+          const data = result.users;
+
+          for (let i = 0; i < data.length; i++) {
+            data[i].booking_from = new Date(data[i].booking_from).toLocaleDateString();
+            data[i].booking_to = new Date(data[i].booking_to).toLocaleDateString();
+            data[i].rate_negotiated = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'INR' }).format(data[i].rate_negotiated);
+            data[i].room_type.name = data[i].room_type.name.charAt(0).toUpperCase() + data[i].room_type.name.slice(1);
+            data[i].name = data[i].name.charAt(0).toUpperCase() + data[i].name.slice(1);
+            data[i].phone_number = data[i].phone_number.replace(/(\d{3})(\d{3})(\d{4})/, '$1-$2-$3');
+          }
+
+          setBookedCustomers(data);
+        }
+
+      } catch (error) {
+        alert(error);
+      }
+    }
+
+    getBookedCustomers();
+
+  }, [])
+
+
   return (
     <section className='all-booking__section'>
       <h1>All Bookings</h1>
@@ -24,50 +67,16 @@ const AllBookings = () => {
               <th>Rate Negotiated</th>
             </tr>
 
-            <tr>
-              <td>User Name 1</td>
-              <td>12-09-2022</td>
-              <td>12-10-2022</td>
-              <td>098394898</td>
-              <td>Family Suite</td>
-              <td>5000</td>
-            </tr>
-
-            <tr>
-              <td>User 2</td>
-              <td>12-09-2022</td>
-              <td>12-10-2022</td>
-              <td>098394898</td>
-              <td>Family Suite</td>
-              <td>5090</td>
-            </tr>
-
-            <tr>
-              <td>User 3</td>
-              <td>12-09-2022</td>
-              <td>12-10-2022</td>
-              <td>098394898</td>
-              <td>Family Suite</td>
-              <td>5000</td>
-            </tr>
-
-            <tr>
-              <td>User 4</td>
-              <td>12-09-2022</td>
-              <td>12-10-2022</td>
-              <td>098394898</td>
-              <td>Family Suite</td>
-              <td>5000</td>
-            </tr>
-
-            <tr>
-              <td>User 5</td>
-              <td>12-09-2022</td>
-              <td>12-10-2022</td>
-              <td>098394898</td>
-              <td>Family Suite</td>
-              <td>5000</td>
-            </tr>
+            {bookedCustomers.map((a) => (
+              <tr key={a.name}>
+                <td>{a.name}</td>
+                <td>{a.booking_from}</td>
+                <td>{a.booking_to}</td>
+                <td>{a.phone_number}</td>
+                <td>{a.room_type.name}</td>
+                <td>{a.rate_negotiated}</td>
+              </tr>
+            ))}
           </tbody>
         </table>
       </div>
