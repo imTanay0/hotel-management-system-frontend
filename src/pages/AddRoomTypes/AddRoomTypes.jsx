@@ -1,12 +1,9 @@
-import React, { useRef, useState } from 'react'
+import React, { useRef } from 'react'
 
 import './addRoomTypes.css'
 import { Link } from 'react-router-dom';
 
 const AddRoomTypes = () => {
-  // const [typeName, setTypeName] = useState({
-  //   value: ''
-  // })
 
   const typeName = useRef('')
 
@@ -33,13 +30,11 @@ const AddRoomTypes = () => {
         throw new Error(`Failed to submit form: ${data.message}`);
       }
 
-    } catch(error) {
+    } catch (error) {
       alert(error.message);
     } finally {
       typeName.current.value = '';
     }
-
-
   }
 
   return (
@@ -51,18 +46,12 @@ const AddRoomTypes = () => {
       </Link>
 
       <main className='addroomtypes-section__form-container'>
-
         <form onSubmit={submitHandler}>
           <label htmlFor="typeName">Enter type of the room: </label>
-          <input id='typeName' type="text" ref={typeName} required />
-
+          <input id='typeName' type="text" ref={typeName} required autoComplete='off'/>
           <button className='btn' type="submit">Submit</button>
-
         </form>
-
-
       </main>
-
     </div>
   )
 }

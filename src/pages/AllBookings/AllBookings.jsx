@@ -19,9 +19,9 @@ const AllBookings = () => {
             'Content-Type': 'application/json',
           }
         })
+        const result = await response.json();
 
         if (response.ok) {
-          const result = await response.json();
 
           const data = result.users;
 
@@ -35,6 +35,8 @@ const AllBookings = () => {
           }
 
           setBookedCustomers(data);
+        } else {
+          throw new Error(`Failed to fetch data: ${result.message}`);
         }
 
       } catch (error) {
