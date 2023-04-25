@@ -1,0 +1,33 @@
+.addroomtypes-section {
+  padding: 20px;
+}
+
+.addroomtypes-section h1 {
+  text-align: center;
+}
+
+.addroomtypes-section__form-container {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.addroomtypes-section__form-container form {
+  padding: 20px;
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: rgba(0, 0, 0, 0.08);
+  border-radius: 10px;
+  box-sizing: border-box;
+  box-shadow: 5px 7px 10px 0px rgba(0, 0, 0, 0.25);
+}
+
+.addroomtypes-section__form-container input {
+  padding: 5px 10px;
+}
+
+.addroomtypes-section__form-container button {
+  margin-top: 15px;
+}

@@ -49,7 +49,6 @@ const AllocateNewRoom = () => {
         throw new Error(`Failed to submit form: ${response.message}`);
       }
     } catch (error) {
-      console.error(error);
       alert(error.message);
     }
 
