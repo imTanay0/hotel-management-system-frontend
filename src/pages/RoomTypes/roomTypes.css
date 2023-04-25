@@ -1,0 +1,12 @@
+.roomtype-section {
+  padding: 20px;
+}
+
+.roomtype-section h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#roomtype-section__table-container {
+  width: 800px;
+}

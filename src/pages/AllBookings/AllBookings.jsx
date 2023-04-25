@@ -38,7 +38,7 @@ const AllBookings = () => {
         }
 
       } catch (error) {
-        alert(error);
+        alert(error.message);
       }
     }
 

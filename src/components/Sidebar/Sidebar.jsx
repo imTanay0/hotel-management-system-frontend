@@ -12,14 +12,18 @@ const Sidebar = () => {
         </div>
       </Link>
 
-      <div className="sidebar__room-types">
-        <p>Room types</p>
-      </div>
-      
-      <div className="sidebar__rooms">
-        <p>Rooms</p>
-      </div>
-      
+      <Link to="/roomtypes">
+        <div className="sidebar__room-types">
+          <p>Room types</p>
+        </div>
+      </Link>
+
+      <Link to="/rooms">
+        <div className="sidebar__rooms">
+          <p>Rooms</p>
+        </div>
+      </Link>
+
       <Link to="/bookings">
         <div className="sidebar__bookings">
           <p>Bookings</p>
@@ -32,9 +36,11 @@ const Sidebar = () => {
         </div>
       </Link>
 
-      <div className="sidebar__customer">
-        <p>Customers</p>
-      </div>
+      <Link to="/customers">
+        <div className="sidebar__customer">
+          <p>Customers</p>
+        </div>
+      </Link>
 
       <Link to="/food">
         <div className="sidebar__food">
