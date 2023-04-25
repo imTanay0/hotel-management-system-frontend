@@ -32,7 +32,7 @@ const Sidebar = () => {
 
       <Link to="/allocate-room">
         <div className="sidebar__allocate-rooms">
-          <p>Allocate Room</p>
+          <p>Allocate new room</p>
         </div>
       </Link>
 
@@ -44,13 +44,13 @@ const Sidebar = () => {
 
       <Link to="/food">
         <div className="sidebar__food">
-          <p>Order Food</p>
+          <p>Order food</p>
         </div>
       </Link>
 
       <Link to="/billing">
         <div className="sidebar__billing">
-          <p>Check Billing</p>
+          <p>Check billing</p>
         </div>
       </Link>
     </div>
