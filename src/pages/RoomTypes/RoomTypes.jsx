@@ -52,7 +52,7 @@ const RoomTypes = () => {
         <table>
           <thead>
             <tr>
-              <th>Type</th>
+              <th>Types</th>
               <th>Rooms</th>
             </tr>
           </thead>
@@ -62,9 +62,13 @@ const RoomTypes = () => {
               <tr key={item.room_type}>
                 <td>{item.room_type}</td>
                 <td>
-                  {item.room_no.map((roomNo) => (
-                    roomNo.no
-                  )).join(", ")}
+                  {
+                    item.room_no.length
+                      ? item.room_no.map((roomNo) => (
+                        roomNo.no
+                      )).join(", ")
+                      : "No room available for this room type"
+                  }
                 </td>
               </tr>
             ))}
