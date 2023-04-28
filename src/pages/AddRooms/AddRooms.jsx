@@ -51,7 +51,7 @@ const AddRooms = () => {
         <button className='btn'>{`< `} Back</button>
       </Link>
 
-      <div className='addroom-section__form-container'>
+      <div className='form-container'>
         <form onSubmit={handleSubmit} autoComplete='off'>
           <label htmlFor="roomNo">Enter the no. of room: </label>
           <input id='roomNo' type="text" ref={roomNo} required />

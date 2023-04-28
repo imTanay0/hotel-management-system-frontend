@@ -13,7 +13,7 @@ const Home = () => {
     <div className='home-section'>
 
       <h1 className='home-section-heading'>
-        Welcome to The Lushai Inn
+        Welcome
       </h1>
 
       <div>

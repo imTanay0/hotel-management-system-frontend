@@ -82,7 +82,7 @@ const AllocateNewRoom = () => {
         <form onSubmit={handleSubmit}>
 
           {/* <div> */}
-          {/* <label htmlFor='user-name'>Name of the Customer: </label> */}
+          <label htmlFor='user-name'>Name of the Customer: </label>
           <input
             id='user-name'
             type="text"
