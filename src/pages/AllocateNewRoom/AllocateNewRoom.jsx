@@ -69,12 +69,6 @@ const AllocateNewRoom = () => {
     <div className='room-allocate-section'>
       <h1>Allocate a Room to a Customer</h1>
 
-      <div id='previous-page-btn'>
-        <Link to="/">
-          <button className='btn'>Go To Home Page</button>
-        </Link>
-      </div>
-
       <div className='form-container'>
         <form onSubmit={handleSubmit}>
 

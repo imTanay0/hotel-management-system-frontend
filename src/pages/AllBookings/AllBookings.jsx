@@ -65,8 +65,10 @@ const AllBookings = () => {
               <th>Booking from</th>
               <th>Booking to</th>
               <th>Contact no.</th>
-              <th>Type of Room</th>
-              <th>Rate Negotiated</th>
+              <th>Type of room</th>
+              <th>Rate negotiated</th>
+              <th>Room availability</th>
+              <th>Book room</th>
             </tr>
 
             {bookedCustomers.map((a) => (
@@ -77,6 +79,10 @@ const AllBookings = () => {
                 <td>{a.phone_number}</td>
                 <td>{a.room_type.name}</td>
                 <td>{a.rate_negotiated}</td>
+                <td>Available</td>
+                <td>
+                  <Link to="/allocate-room"><button className='btn-light'>Book Now</button></Link>
+                </td>
               </tr>
             ))}
           </tbody>

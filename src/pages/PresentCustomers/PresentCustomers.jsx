@@ -29,10 +29,7 @@ const PresentCustomers = () => {
       } catch (error) {
         alert(error.message);
       }
-
-
     }
-
 
     getResidents();
   }, [])
@@ -51,8 +48,8 @@ const PresentCustomers = () => {
   }
 
   return (
-    <div>
-      <h1>Customers in the Hotel</h1>
+    <div className='customer-section'>
+      <h1>Residents of the Hotel</h1>
 
       <div className="table-container">
         <table>
