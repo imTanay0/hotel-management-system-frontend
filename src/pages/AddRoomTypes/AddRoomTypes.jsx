@@ -45,7 +45,7 @@ const AddRoomTypes = () => {
         <button className='btn'>{`< `} Back</button>
       </Link>
 
-      <main className='addroomtypes-section__form-container'>
+      <main className='form-container'>
         <form onSubmit={submitHandler}>
           <label htmlFor="typeName">Enter type of the room: </label>
           <input id='typeName' type="text" ref={typeName} required autoComplete='off'/>

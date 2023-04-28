@@ -12,37 +12,19 @@ const Food = () => {
         <button className='btn'>Go To Home Page</button>
       </Link>
 
-      <div className='food-section-form'>
+      <div className='form-container'>
         <form>
           <label>Date: <input type="date" /></label>
 
-          <br />
-          <br />
-
           <label>Time: <input type="time" /></label>
-
-          <br />
-          <br />
 
           <label>Room no: <input type="text" /></label>
 
-          <br />
-          <br />
-
-          <label>Item Ordered: (From a dropdown menu)</label>
-
-          <br />
-          <br />
+          {/* <label>Item Ordered: (From a dropdown menu)</label> */}
 
           <label>Room No: <input type="text" /></label>
 
-          <br />
-          <br />
-
           <label>Amount: <input type="text" /></label>
-
-          <br />
-          <br />
 
           <button className='btn' type='submit'>Submit</button>
 

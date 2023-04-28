@@ -13,7 +13,6 @@ const AllocateNewRoom = () => {
     local_contact_number: '',
     date_of_check_in: '',
     company_name: '',
-    // rate_negotiated: ''
     GSTIN_no: '',
   })
 
@@ -61,11 +60,9 @@ const AllocateNewRoom = () => {
       local_contact_number: '',
       date_of_check_in: '',
       company_name: '',
-      // rate_negotiated: ''
       GSTIN_no: '',
     });
   };
-
 
 
   return (
@@ -78,10 +75,9 @@ const AllocateNewRoom = () => {
         </Link>
       </div>
 
-      <div className='room-allocate-section-form'>
+      <div className='form-container'>
         <form onSubmit={handleSubmit}>
 
-          {/* <div> */}
           <label htmlFor='user-name'>Name of the Customer: </label>
           <input
             id='user-name'
@@ -89,27 +85,18 @@ const AllocateNewRoom = () => {
             name='name'
             value={userInfo.name}
             onChange={handleChange}
-            placeholder='Enter name of the Customer'
             autoComplete='false'
           />
-          {/* </div> */}
 
-          {/* <br />
-          <br /> */}
-
-          {/* // TODO: Add Upload Photo Feature }
+          {/* // TODO: Add Upload Photo Feature */}
           {/* <label htmlFor='user-photo'>Photo Identity: </label>
           <input
             id='user-photo'
             type="text"
             // name='photoId'
             onChange={handleChange}
-          />
+          /> */}
 
-          <br />
-          <br /> */}
-
-          {/* <div> */}
           <label htmlFor='user-phoneNo'>Phone no: </label>
           <input
             id='user-phoneNo'
@@ -118,10 +105,6 @@ const AllocateNewRoom = () => {
             value={userInfo.phone_number}
             onChange={handleChange}
           />
-          {/* </div> */}
-
-          {/* <br />
-          <br /> */}
 
           <label htmlFor='user-address'>Address: </label>
           <input
@@ -131,8 +114,6 @@ const AllocateNewRoom = () => {
             value={userInfo.address}
             onChange={handleChange}
           />
-          {/* <br />
-          <br /> */}
 
           <label htmlFor='user-roomNo'>Room No: </label>
           <input
@@ -143,9 +124,6 @@ const AllocateNewRoom = () => {
             onChange={handleChange}
           />
 
-          {/* <br />
-          <br /> */}
-
           <label htmlFor='user-localNo'>Local Contact No: </label>
           <input
             id='user-localNo'
@@ -154,9 +132,6 @@ const AllocateNewRoom = () => {
             value={userInfo.local_contact_number}
             onChange={handleChange}
           />
-
-          {/* <br />
-          <br /> */}
 
           <label htmlFor='user-date_of_check_in'>Date of Check in: </label>
           <input
@@ -167,9 +142,6 @@ const AllocateNewRoom = () => {
             onChange={handleChange}
           />
 
-          {/* <br />
-          <br /> */}
-
           <label htmlFor='user-company_name'>Company Name: </label>
           <input
             id='user-company_name'
@@ -178,9 +150,6 @@ const AllocateNewRoom = () => {
             value={userInfo.company_name}
             onChange={handleChange}
           />
-
-          {/* <br />
-          <br /> */}
 
           <label htmlFor='user-GSTIN'>GSTIN No: </label>
           <input
@@ -191,12 +160,7 @@ const AllocateNewRoom = () => {
             onChange={handleChange}
           />
 
-          {/* <br />
-          <br /> */}
-
-          <div id="form-submit-btn">
-            <button className='btn' type='submit'>Submit</button>
-          </div>
+          <button className='btn' type='submit'>Submit</button>
         </form>
       </div>
     </div>

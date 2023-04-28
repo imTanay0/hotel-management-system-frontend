@@ -14,8 +14,8 @@ const AddBooking = () => {
     roomTypeName: "",
     rateNegotiated: 0,
   })
-  
-  
+
+
   return (
     <section className='booking-section'>
       <h1>Book a New Customer</h1>
@@ -27,53 +27,30 @@ const AddBooking = () => {
         </Link>
       </div>
 
-      <div className='booking-section-form'>
+      <div className='form-container'>
         <form>
           <span>Date of Booking: </span>
           <input type="date" />
 
-          <br />
-          <br />
-
           <span>Booking from: </span>
           <input type="date" />
-
-          <br />
-          <br />
 
           <span>Booking to: </span>
           <input type="date" />
 
-          <br />
-          <br />
-
           <label>Name of the Customer: </label>
           <input type="text" />
-
-          <br />
-          <br />
 
           <span>Contact no.: </span>
           <input type="text" />
 
-          <br />
-          <br />
-
           <span>Type of Room: </span>
           <input type="text" />
-
-          <br />
-          <br />
 
           <span>Rate Negotiated: </span>
           <input type="text" />
 
-          <br />
-          <br />
-
-          <div className="submit-btn">
-            <button className='btn' type="submit">Book Customer</button>
-          </div>
+          <button className='btn' type="submit">Book Customer</button>
         </form>
       </div>
 
