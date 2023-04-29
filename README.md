@@ -1,6 +1,6 @@
 # Overview
 
-A simple demo of how hotel management workflow works.
+A simple demo of a hotel management workflow.
 
 ## Features
 
