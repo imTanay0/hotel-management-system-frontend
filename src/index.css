@@ -31,7 +31,7 @@
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #a5a5a5;
+  background-color: #c7c7c7;
   color: #1a1a1a;
   cursor: pointer;
   transition: border-color 0.25s;
@@ -43,6 +43,18 @@
 .btn-light:focus,
 .btn-light:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+.ghost-light:hover {
+  border-color: transparent;
+  background-color: #c7c7c7;
+  cursor: no-drop;
+}
+
+.ghost:hover {
+  border-color: transparent;
+  background-color: #1a1a1a;
+  cursor: no-drop;
 }
 
 /* Table Styles */

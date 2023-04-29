@@ -78,7 +78,7 @@ const AllBookings = () => {
               <th>Contact no.</th>
               <th>Type of room</th>
               <th>Rate negotiated</th>
-              <th>Rooms available</th>
+              <th>Available rooms</th>
               <th>Book room</th>
             </tr>
           </thead>
@@ -92,7 +92,7 @@ const AllBookings = () => {
                 <td>{customer.room_type}</td>
                 <td>{customer.rate_negotiated}</td>
                 <td>
-                  {availableRooms[customer.name] ?
+                  {availableRooms[customer.name].length > 0 ?
                     availableRooms[customer.name].map((room, index) => (
                       <span key={room}>
                         {room}{index !== availableRooms[customer.name].length - 1 && ', '}
@@ -102,9 +102,12 @@ const AllBookings = () => {
                   }
                 </td>
                 <td>
-                  <Link to='/allocate-room'>
-                    <button className='btn-light'>Book Now</button>
-                  </Link>
+                  {availableRooms[customer.name].length > 0 ?
+                    <Link to='/allocate-room'>
+                      <button className='btn-light'>Allot room</button>
+                    </Link>
+                    : <button className='btn-light ghost-light' disabled>Not Availble</button>
+                  }
                 </td>
               </tr>
             ))}
