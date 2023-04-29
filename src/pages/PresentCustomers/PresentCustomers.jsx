@@ -17,11 +17,14 @@ const PresentCustomers = () => {
         })
         const result = await response.json();
 
-        if (response.ok) {
+        if (result.success) {
 
-          const data = result.users;
+          result.users.forEach(item => {
+            item.phone_number = item.phone_number.replace(/(\d{3})(\d{3})(\d{4})/, '$1-$2-$3');
+          }); 
 
-          setResidents(data);
+          setResidents(result.users);
+
         } else {
           throw new Error(`Failed to fetch data: ${result.message}`);
         }
