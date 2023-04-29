@@ -29,7 +29,7 @@ const AllocateNewRoom = () => {
     }
 
     try {
-      const res = await fetch('http://localhost:8080/api/v1/user/register', {
+      const res = await fetch('http://localhost:8080/api/v1/user/allocateroom', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -42,7 +42,7 @@ const AllocateNewRoom = () => {
       if (response.success) {
         alert("Customer Booked successfully")
       } else {
-        throw new Error(`Failed to submit form: ${response.message}`);
+        throw new Error(`Error: ${response.message}`);
       }
     } catch (error) {
       alert(error.message);
