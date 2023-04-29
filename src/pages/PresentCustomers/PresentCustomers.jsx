@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 
 import './presentCustomers.css'
+import { Link } from 'react-router-dom';
 
 const PresentCustomers = () => {
 
@@ -21,7 +22,7 @@ const PresentCustomers = () => {
 
           result.users.forEach(item => {
             item.phone_number = item.phone_number.replace(/(\d{3})(\d{3})(\d{4})/, '$1-$2-$3');
-          }); 
+          });
 
           setResidents(result.users);
 
@@ -62,6 +63,8 @@ const PresentCustomers = () => {
               <th>Room no.</th>
               <th>Phone no.</th>
               <th>Days spent</th>
+              <th>Order food</th>
+              <th>Total bill</th>
             </tr>
           </thead>
           <tbody>
@@ -71,6 +74,12 @@ const PresentCustomers = () => {
                 <td>{user.room_no.no}</td>
                 <td>{user.phone_number}</td>
                 <td>{calculateDays(user.date_of_check_in, new Date())}</td>
+                <td>
+                  <Link to="/food">
+                    <button className='btn-light'>Order Now</button>
+                  </Link>
+                </td>
+                <td>N/A</td>
               </tr>
             ))}
           </tbody>
