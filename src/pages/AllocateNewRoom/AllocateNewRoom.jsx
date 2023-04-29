@@ -39,9 +39,6 @@ const AllocateNewRoom = () => {
 
       const response = await res.json();
 
-      // Printing the reponse in the Console
-      // console.log(response)
-
       if (response.success) {
         alert("Customer Booked successfully")
       } else {

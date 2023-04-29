@@ -92,10 +92,14 @@ const AllBookings = () => {
                 <td>{customer.room_type}</td>
                 <td>{customer.rate_negotiated}</td>
                 <td>
-                  {availableRooms[customer.name] &&
-                    availableRooms[customer.name].map(room => (
-                      <span key={room}>{room} </span>
-                    ))}
+                  {availableRooms[customer.name] ?
+                    availableRooms[customer.name].map((room, index) => (
+                      <span key={room}>
+                        {room}{index !== availableRooms[customer.name].length - 1 && ', '}
+                      </span>
+                    ))
+                    : 'N/A'
+                  }
                 </td>
                 <td>
                   <Link to='/allocate-room'>

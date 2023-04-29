@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 
 import './addBooking.css'
@@ -12,8 +12,44 @@ const AddBooking = () => {
     customerName: "",
     contactNo: "",
     roomTypeName: "",
-    rateNegotiated: 0,
+    rateNegotiated: "",
   })
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+
+      const response = await fetch('http://localhost:8080/api/v1/user/book', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(customer)
+      })
+
+      const data = await response.json();
+
+      if (data.success) {
+        alert("Booking Successful");
+      } else {
+        throw new Error(data.message);
+      }
+
+    } catch (error) {
+      alert(error.message);
+    } finally {
+      setCustomer({
+        dateOfBooking: "",
+        bookingFrom: "",
+        bookingTo: "",
+        customerName: "",
+        contactNo: "",
+        roomTypeName: "",
+        rateNegotiated: "",
+      })
+    }
+  }
 
 
   return (
@@ -28,27 +64,69 @@ const AddBooking = () => {
       </div>
 
       <div className='form-container'>
-        <form>
-          <span>Date of Booking: </span>
-          <input type="date" />
+        <form onSubmit={handleSubmit}>
+          <label htmlFor="dateOfBooking">Date of booking: </label>
+          <input
+            id='dateOfBooking'
+            type="date"
+            value={customer.dateOfBooking}
+            onChange={e => setCustomer({ ...customer, dateOfBooking: e.target.value })}
+            required
+          />
 
-          <span>Booking from: </span>
-          <input type="date" />
+          <label htmlFor='bookingFrom'>Booking from: </label>
+          <input
+            id='bookingFrom'
+            type="date"
+            value={customer.bookingFrom}
+            onChange={e => setCustomer({ ...customer, bookingFrom: e.target.value })}
+            required
+          />
 
-          <span>Booking to: </span>
-          <input type="date" />
+          <label htmlFor='bookingTo'>Booking to: </label>
+          <input
+            id='bookingTo'
+            type="date"
+            value={customer.bookingTo}
+            onChange={e => setCustomer({ ...customer, bookingTo: e.target.value })}
+            required
+          />
 
-          <label>Name of the Customer: </label>
-          <input type="text" />
+          <label htmlFor='customerName'>Name of the Customer: </label>
+          <input
+            id='customerName'
+            type="text"
+            value={customer.customerName}
+            onChange={e => setCustomer({ ...customer, customerName: e.target.value })}
+            required
+          />
 
-          <span>Contact no.: </span>
-          <input type="text" />
+          <label htmlFor='contactNo'>Contact no.: </label>
+          <input
+            id='contactNo'
+            type="text"
+            value={customer.contactNo}
+            onChange={e => setCustomer({ ...customer, contactNo: e.target.value })}
+            required
+          />
 
-          <span>Type of Room: </span>
-          <input type="text" />
+          <label htmlFor='roomTypeName'>Type of Room: </label>
+          <input
+            id='roomTypeName'
+            type="text"
+            value={customer.roomTypeName}
+            onChange={e => setCustomer({ ...customer, roomTypeName: e.target.value })}
+            required
+          />
 
-          <span>Rate Negotiated: </span>
-          <input type="text" />
+          <label htmlFor='rateNegotiated'>Rate Negotiated: </label>
+          <input
+            id='rateNegotiated'
+            type="text"
+            value={customer.rateNegotiated}
+            onChange={e => setCustomer({ ...customer, rateNegotiated: Number(e.target.value) })}
+            required
+          />
 
           <button className='btn' type="submit">Book Customer</button>
         </form>
