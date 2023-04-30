@@ -42,7 +42,7 @@ const Sidebar = () => {
         </div>
       </Link>
 
-      <Link to="/food">
+      <Link to="/orderfood/:userId">
         <div className="sidebar__food">
           <p>Order food</p>
         </div>

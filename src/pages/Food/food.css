@@ -1,3 +1,12 @@
-.food-section-form {
-  padding: 100px;
+.food-section {
+  padding: 20px;
+}
+
+.food-section h1 {
+  text-align: center;
+}
+
+.food-section form select,
+.food-section form select option {
+  padding: 5px 2px;
 }

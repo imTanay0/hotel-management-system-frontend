@@ -1,30 +1,37 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 
 import './food.css'
 
 const Food = () => {
+
+  const params = useParams();
+
+  // console.log(params.userId);
+
   return (
     <div className='food-section'>
-      <h1>Food</h1>
-
-      <Link to="/">
-        <button className='btn'>Go To Home Page</button>
-      </Link>
+      <h1>Order Food</h1>
 
       <div className='form-container'>
         <form>
-          <label>Date: <input type="date" /></label>
+          <label htmlFor='date'>Date: </label>
+          <input id='date' type="date" />
 
-          <label>Time: <input type="time" /></label>
+          <label htmlFor='time'>Time: </label>
+          <input id='time' type="time" />
 
-          <label>Room no: <input type="text" /></label>
+          <label htmlFor='foods'>Select food: </label>
+          <select id="foods">
+            <option value="Food 1">Food 1</option>
+            <option value="Food 2">Food 2</option>
+          </select>
 
-          {/* <label>Item Ordered: (From a dropdown menu)</label> */}
+          <label htmlFor='roomNo'>Room No: </label>
+          <input id='roomNo' type="text" />
 
-          <label>Room No: <input type="text" /></label>
-
-          <label>Amount: <input type="text" /></label>
+          <label htmlFor='amount'>Amount: </label>
+          <input id='amount' type="text" />
 
           <button className='btn' type='submit'>Submit</button>
 
