@@ -42,11 +42,11 @@ const Sidebar = () => {
         </div>
       </Link>
 
-      <Link to="/orderfood/:userId">
+      {/* <Link to="/orderfood/:userId">
         <div className="sidebar__food">
           <p>Order food</p>
         </div>
-      </Link>
+      </Link> */}
 
       <Link to="/billing">
         <div className="sidebar__billing">
