@@ -38,7 +38,7 @@ const Sidebar = () => {
 
       <Link to="/customers">
         <div className="sidebar__customer">
-          <p>Customers</p>
+          <p>Customer details</p>
         </div>
       </Link>
 
@@ -48,7 +48,7 @@ const Sidebar = () => {
         </div>
       </Link> */}
 
-      <Link to="/billing">
+      <Link to="/billing/:userId">
         <div className="sidebar__billing">
           <p>Check billing</p>
         </div>

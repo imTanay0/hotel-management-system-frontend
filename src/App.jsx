@@ -38,7 +38,7 @@ function App() {
             <Route path='/allocate-room' element={<AllocateNewRoom />} />
             <Route path='/customers' element={<PresentCustomers />} />
             <Route path='/orderfood/:userId' element={<Food />} />
-            <Route path='/billing' element={<Billing />} />
+            <Route path='/billing/:userId' element={<Billing />} />
           </Routes>
         </main>
 

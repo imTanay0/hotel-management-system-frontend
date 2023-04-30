@@ -79,7 +79,11 @@ const PresentCustomers = () => {
                     <button className='btn-light'>Order Now</button>
                   </Link>
                 </td>
-                <td>N/A</td>
+                <td>
+                  <Link to={`/billing/${user._id}`}>
+                    <button className='btn-light'>Check billing</button>
+                  </Link>
+                </td>
               </tr>
             ))}
           </tbody>
