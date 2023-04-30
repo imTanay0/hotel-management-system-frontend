@@ -39,12 +39,62 @@ const Food = () => {
       }
     }
 
+    const getRoomNo = async () => {
+      try {
+
+        const response = await fetch(`http://localhost:8080/api/v1/user/getdetail/${params.userId}`, {
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json',
+          }
+        })
+
+        const data = await response.json()
+
+        if (data.success) {
+          setFoodOrder((currVal) => ({ ...currVal, roomNo: data.user.room_no.no }))
+        } else {
+          throw new Error(data.message)
+        }
+
+      } catch (error) {
+        alert(error.message)
+      }
+    }
+
     getAllFoods();
+    getRoomNo();
   }, [])
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("hello");
+
+    try {
+      const response = await fetch(`http://localhost:8080/api/v1/user/order-food/${params.userId}`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(foodOrder)
+      })
+
+      const data = await response.json()
+
+      if (data.success) {
+        alert("Food ordered successfully")
+      } else {
+        throw new Error(data.message)
+      }
+
+    } catch (error) {
+      alert(error.message);
+    } finally {
+      setFoodOrder({
+        date: '',
+        time: '',
+        amount: '',
+      })
+    }
   }
 
   return (
@@ -59,6 +109,7 @@ const Food = () => {
             type="date"
             value={foodOrder.date}
             onChange={(e) => setFoodOrder({ ...foodOrder, date: e.target.value })}
+            required
           />
 
           <label htmlFor='time'>Time: </label>
@@ -67,6 +118,7 @@ const Food = () => {
             type="time"
             value={foodOrder.time}
             onChange={(e) => setFoodOrder({ ...foodOrder, time: e.target.value })}
+            required
           />
 
           <label htmlFor='foods'>Select food: </label>
@@ -85,7 +137,7 @@ const Food = () => {
             id='roomNo'
             type="text"
             value={foodOrder.roomNo}
-            onChange={(e) => setFoodOrder({ ...foodOrder, roomNo: e.target.value })}
+            required
           />
 
           <label htmlFor='amount'>Amount: </label>
@@ -94,6 +146,7 @@ const Food = () => {
             type="text"
             value={foodOrder.amount}
             onChange={(e) => setFoodOrder({ ...foodOrder, amount: Number(e.target.value) })}
+            required
           />
 
           <button className='btn' type='submit'>Submit</button>
