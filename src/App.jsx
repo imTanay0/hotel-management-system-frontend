@@ -32,15 +32,12 @@ function App() {
             <Route path='/roomtypes' element={<RoomTypes />} />
             <Route path='/roomtypes/add' element={<AddRoomTypes />} />
             <Route path='/rooms' element={<Rooms />} />
-            <Route path='/rooms/add' element={<AddRooms/>} />
+            <Route path='/rooms/add' element={<AddRooms />} />
             <Route path='/bookings' element={<AllBookings />} />
             <Route path='/bookings/add' element={<AddBooking />} />
             <Route path='/allocate-room' element={<AllocateNewRoom />} />
             <Route path='/customers' element={<PresentCustomers />} />
-            <Route 
-              path='/orderfood/:userId'
-              element={<Food />}
-            />
+            <Route path='/orderfood/:userId' element={<Food />} />
             <Route path='/billing' element={<Billing />} />
           </Routes>
         </main>

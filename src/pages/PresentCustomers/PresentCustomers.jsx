@@ -75,7 +75,7 @@ const PresentCustomers = () => {
                 <td>{user.phone_number}</td>
                 <td>{calculateDays(user.date_of_check_in, new Date())}</td>
                 <td>
-                  <Link to="/food">
+                  <Link to={`/orderfood/${user._id}`}>
                     <button className='btn-light'>Order Now</button>
                   </Link>
                 </td>
