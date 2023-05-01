@@ -1,3 +1,7 @@
-.billing-section-form {
-  padding: 100px;
+.billing-section {
+  padding: 20px;
+}
+
+.billing-section h1 {
+  text-align: center;
 }
