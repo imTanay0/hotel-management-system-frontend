@@ -101,6 +101,10 @@ const Food = () => {
     <div className='food-section'>
       <h1>Order Food</h1>
 
+      <Link to='/customers'>
+        <button className='btn'>{`< `} Back</button>
+      </Link>
+
       <div className='form-container'>
         <form onSubmit={handleSubmit}>
           <label htmlFor='date'>Date: </label>
