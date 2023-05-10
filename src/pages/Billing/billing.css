@@ -5,3 +5,12 @@
 .billing-section h1 {
   text-align: center;
 }
+
+#billing-section__form {
+  padding-inline: 100px;
+}
+
+.item-container {
+  display: flex;
+  justify-content: space-between;
+}

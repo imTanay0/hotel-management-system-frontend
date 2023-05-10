@@ -41,18 +41,6 @@ const Sidebar = () => {
           <p>Customer details</p>
         </div>
       </Link>
-
-      {/* <Link to="/orderfood/:userId">
-        <div className="sidebar__food">
-          <p>Order food</p>
-        </div>
-      </Link> */}
-
-      <Link to="/billing/:userId">
-        <div className="sidebar__billing">
-          <p>Check billing</p>
-        </div>
-      </Link>
     </div>
   )
 }

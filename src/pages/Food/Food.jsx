@@ -5,7 +5,6 @@ import './food.css'
 
 const Food = () => {
 
-  const params = useParams();
   const [foodNames, setFoodNames] = useState([]);
   const [foodOrder, setFoodOrder] = useState({
     date: '',
@@ -14,6 +13,7 @@ const Food = () => {
     roomNo: '',
     amount: '',
   })
+  const params = useParams();
 
   useEffect(() => {
 
