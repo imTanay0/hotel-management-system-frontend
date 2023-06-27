@@ -82,7 +82,7 @@ const AllocateNewRoom = () => {
       alert(error.message);
     }
 
-    // Empty the form inputs after Submit 
+    // Empty the form inputs after Submit
     setUserInfo({
       name: '',
       phone_number: '',

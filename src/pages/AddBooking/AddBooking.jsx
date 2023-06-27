@@ -39,7 +39,7 @@ const AddBooking = () => {
     }
 
     getAllRoomTypes();
-  }, [])
+  }, []);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
