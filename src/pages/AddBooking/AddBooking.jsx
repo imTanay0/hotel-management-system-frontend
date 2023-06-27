@@ -5,6 +5,7 @@ import './addBooking.css'
 
 const AddBooking = () => {
 
+  const [roomTypes, setRoomTypes] = useState([]);
   const [customer, setCustomer] = useState({
     dateOfBooking: "",
     bookingFrom: "",
@@ -13,6 +14,31 @@ const AddBooking = () => {
     contactNo: "",
     roomTypeName: "",
     rateNegotiated: "",
+  })
+
+  useEffect(() => {
+    const getAllRoomTypes = async () => {
+      try {
+        const response = await fetch('http://localhost:8080/api/v1/roomtype/getall', {
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        })
+
+        const result = await response.json();
+
+        if (result.success) {
+          setRoomTypes(result.roomTypes);
+        } else {
+          throw new Error(`Failed to fetch room types: ${result.message}`);
+        }
+      } catch (error) {
+        alert(error.message);
+      }
+    }
+
+    getAllRoomTypes();
   })
 
   const handleSubmit = async (e) => {
@@ -110,14 +136,18 @@ const AddBooking = () => {
             required
           />
 
-          <label htmlFor='roomTypeName'>Type of Room: </label>
+          <label htmlFor="roomType">Type of Room: </label>
           <input
-            id='roomTypeName'
-            type="text"
-            value={customer.roomTypeName}
-            onChange={e => setCustomer({ ...customer, roomTypeName: e.target.value })}
+            list='roomTypeOptions'
+            placeholder='Enter the type of room'
             required
+            onSelect={e => setCustomer({ ...customer, roomTypeName: e.target.value })}
           />
+          <datalist id='roomTypeOptions'>
+            {roomTypes.map((roomType, idx) => (
+              <option key={idx} value={roomType.room_type}>{roomType.room_type}</option>
+            ))}
+          </datalist>
 
           <label htmlFor='rateNegotiated'>Rate Negotiated: </label>
           <input
