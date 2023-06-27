@@ -111,6 +111,7 @@ const AllocateNewRoom = () => {
             value={userAvailableDetails.name}
             onChange={handleChange}
             autoComplete='false'
+            required
           />
 
           {/* // TODO: Add Upload Photo Feature */}
@@ -129,6 +130,7 @@ const AllocateNewRoom = () => {
             name='phone_number'
             value={userAvailableDetails.phone_number}
             onChange={handleChange}
+            required
           />
 
           <label htmlFor='user-address'>Address: </label>
@@ -138,6 +140,7 @@ const AllocateNewRoom = () => {
             name='address'
             value={userInfo.address}
             onChange={handleChange}
+            required
           />
 
           <label htmlFor='user-roomNo'>Room No: </label>
@@ -147,6 +150,7 @@ const AllocateNewRoom = () => {
             name='room_no'
             value={userInfo.room_no}
             onChange={handleChange}
+            required
           />
 
           <label htmlFor='user-localNo'>Local Contact No: </label>
@@ -156,6 +160,7 @@ const AllocateNewRoom = () => {
             name='local_contact_number'
             value={userInfo.local_contact_number}
             onChange={handleChange}
+            required
           />
 
           <label htmlFor='user-date_of_check_in'>Date of Check in: </label>
@@ -165,6 +170,7 @@ const AllocateNewRoom = () => {
             name='date_of_check_in'
             value={userInfo.date_of_check_in}
             onChange={handleChange}
+            required
           />
 
           <label htmlFor='user-company_name'>Company Name: </label>
@@ -174,6 +180,7 @@ const AllocateNewRoom = () => {
             name='company_name'
             value={userInfo.company_name}
             onChange={handleChange}
+            required
           />
 
           <label htmlFor='user-GSTIN'>GSTIN No: </label>
@@ -183,6 +190,7 @@ const AllocateNewRoom = () => {
             name='GSTIN_no'
             value={userInfo.GSTIN_no}
             onChange={handleChange}
+            required
           />
 
           <button className='btn' type='submit'>Submit</button>
