@@ -48,6 +48,10 @@ const PresentCustomers = () => {
     const diffInHours = diffInMinutes / 60;
     const diffInDays = diffInHours / 24;
 
+    if (diffInDays < 0) {
+      return (0 + ' days' )
+    }
+
     return Math.floor(diffInDays) + ' days';
   }
 
@@ -76,7 +80,12 @@ const PresentCustomers = () => {
                 <td>{calculateDays(user.date_of_check_in, new Date())}</td>
                 <td>
                   <Link to={`/orderfood/${user._id}`}>
-                    <button className='btn-light'>Order Now</button>
+                    <button className={`btn-light ${calculateDays(user.date_of_check_in, new Date()) === 0 + ' days' ? 'ghost-light' : null}`}>
+                      {`${calculateDays(user.date_of_check_in, new Date()) === 0 + ' days'
+                          ? 'N/A'
+                          : 'Order Now'
+                      }`}
+                    </button>
                   </Link>
                 </td>
                 <td>
