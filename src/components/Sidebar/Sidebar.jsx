@@ -30,12 +30,6 @@ const Sidebar = () => {
         </div>
       </Link>
 
-      <Link to="/allocate-room">
-        <div className="sidebar__allocate-rooms">
-          <p>Allocate new room</p>
-        </div>
-      </Link>
-
       <Link to="/customers">
         <div className="sidebar__customer">
           <p>Customer details</p>

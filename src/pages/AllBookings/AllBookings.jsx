@@ -31,6 +31,7 @@ const AllBookings = () => {
               name: customerName,
               phone_number,
               availableRooms,
+              _id,
             } = customer;
 
             return {
@@ -44,6 +45,7 @@ const AllBookings = () => {
               name: customerName.charAt(0).toUpperCase() + customerName.slice(1),
               phone_number: phone_number.replace(/(\d{3})(\d{3})(\d{4})/, '$1-$2-$3'),
               availableRooms,
+              _id,
             };
           });
 
@@ -103,7 +105,7 @@ const AllBookings = () => {
                 </td>
                 <td>
                   {availableRooms[customer.name].length > 0 ?
-                    <Link to='/allocate-room'>
+                    <Link to={`/allocate-room/${customer._id}`}>
                       <button className='btn-light'>Allot room</button>
                     </Link>
                     : <button className='btn-light ghost-light' disabled>Not Availble</button>

@@ -1,10 +1,11 @@
-import { React, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { React, useEffect, useState } from 'react'
+import { Link, useParams } from 'react-router-dom'
 
 import './allocateNewRoom.css'
 
 const AllocateNewRoom = () => {
 
+  const [userAvailableDetails, setUserAvailableDetails] = useState({});
   const [userInfo, setUserInfo] = useState({
     name: '',
     phone_number: '',
@@ -16,8 +17,41 @@ const AllocateNewRoom = () => {
     GSTIN_no: '',
   })
 
+  const params = useParams();
+
+  useEffect(() => {
+    const getUserDetails = async () => {
+      try {
+        const response = await fetch(`http://localhost:8080/api/v1/user/getdetail/${params.userId}`, {
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json',
+          }
+        })
+
+        const result = await response.json();
+
+        if (result.success) {
+          setUserAvailableDetails(result.user)
+        } else {
+          throw new Error(`Failed to fetch user data: ${result.message}`)
+        }
+
+      } catch (error) {
+        alert(error.message);
+      }
+    }
+
+    getUserDetails();
+  }, [])
+
   const handleChange = (e) => {
-    setUserInfo({ ...userInfo, [e.target.name]: e.target.value })
+    setUserInfo({
+      ...userInfo,
+      name: userAvailableDetails.name,
+      phone_number: userAvailableDetails.phone_number,
+      [e.target.name]: e.target.value
+    })
   }
 
   const handleSubmit = async (e) => {
@@ -74,7 +108,7 @@ const AllocateNewRoom = () => {
             id='user-name'
             type="text"
             name='name'
-            value={userInfo.name}
+            value={userAvailableDetails.name}
             onChange={handleChange}
             autoComplete='false'
           />
@@ -93,7 +127,7 @@ const AllocateNewRoom = () => {
             id='user-phoneNo'
             type="text"
             name='phone_number'
-            value={userInfo.phone_number}
+            value={userAvailableDetails.phone_number}
             onChange={handleChange}
           />
 

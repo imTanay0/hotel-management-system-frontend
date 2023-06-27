@@ -35,7 +35,7 @@ function App() {
             <Route path='/rooms/add' element={<AddRooms />} />
             <Route path='/bookings' element={<AllBookings />} />
             <Route path='/bookings/add' element={<AddBooking />} />
-            <Route path='/allocate-room' element={<AllocateNewRoom />} />
+            <Route path='/allocate-room/:userId' element={<AllocateNewRoom />} />
             <Route path='/customers' element={<PresentCustomers />} />
             <Route path='/orderfood/:userId' element={<Food />} />
             <Route path='/billing/:userId' element={<Billing />} />
