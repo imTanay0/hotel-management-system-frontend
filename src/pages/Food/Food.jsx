@@ -20,7 +20,7 @@ const Food = () => {
     const getAllFoods = async () => {
       try {
 
-        const response = await fetch('http://localhost:8080/api/v1/food/allfoods', {
+        const response = await fetch('http://13.51.157.224:8080/api/v1/food/allfoods', {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json'

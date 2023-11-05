@@ -10,7 +10,7 @@ const AllBookings = () => {
   useEffect(() => {
     const fetchBookedCustomers = async () => {
       try {
-        const response = await fetch('http://localhost:8080/api/v1/user/bookings', {
+        const response = await fetch('http://13.51.157.224:8080/api/v1/user/bookings', {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',

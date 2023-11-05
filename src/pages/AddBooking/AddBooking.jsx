@@ -19,7 +19,7 @@ const AddBooking = () => {
   useEffect(() => {
     const getAllRoomTypes = async () => {
       try {
-        const response = await fetch('http://localhost:8080/api/v1/roomtype/getall', {
+        const response = await fetch('http://13.51.157.224:8080/api/v1/roomtype/getall', {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',
@@ -46,7 +46,7 @@ const AddBooking = () => {
 
     try {
 
-      const response = await fetch('http://localhost:8080/api/v1/user/book', {
+      const response = await fetch('http://13.51.157.224:8080/api/v1/user/book', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

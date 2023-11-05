@@ -12,7 +12,7 @@ const AddRoomTypes = () => {
 
     try {
 
-      const response = await fetch('http://localhost:8080/api/v1/roomtype/add', {
+      const response = await fetch('http://13.51.157.224:8080/api/v1/roomtype/add', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
