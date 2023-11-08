@@ -42,7 +42,7 @@ const Food = () => {
     const getRoomNo = async () => {
       try {
 
-        const response = await fetch(`http://localhost:8080/api/v1/user/getdetail/${params.userId}`, {
+        const response = await fetch(`http://13.51.157.224:8080/api/v1/user/getdetail/${params.userId}`, {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',
@@ -70,7 +70,7 @@ const Food = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch(`http://localhost:8080/api/v1/user/order-food/${params.userId}`, {
+      const response = await fetch(`http://13.51.157.224:8080/api/v1/user/order-food/${params.userId}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
